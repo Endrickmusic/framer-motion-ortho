@@ -21,7 +21,8 @@ export default function App() {
     <motion.h1
       layout
       children="Framer Motion Orthographic Camera"
-      animate={{ color: isFullscreen ? "#cc0f4e" : "#000" }}
+      animate={{ color: isFullscreen ? "#ffffff" : "#000", 
+      fontSize: isFullscreen ? "5em" : "3em"}}
     />
     <motion.div className="container" layout>
       <Suspense fallback={null}>
