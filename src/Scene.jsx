@@ -61,17 +61,14 @@ function Lights() {
 }
 
 function Box({ position }) {
-
-  const material = new MeshStandardMaterial({ color: 'blue' })
-  const geometry = new BoxGeometry(1, 1, 1)
-
   return (
-    <primitive 
-      object={new Mesh(geometry, material)} 
-      position={position} 
-    />
+    <mesh position={position}>
+      <boxGeometry args={[1, 1, 1]} />
+      <motion.meshStandardMaterial color="blue" />
+    </mesh>
   );
 }
+
 
 function Geometry({ size = 20 }) {
   const boxes = [];
